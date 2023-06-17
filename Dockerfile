@@ -1,7 +1,7 @@
 #
 # Build stage
 #
-FROM maven:4.0.0-jdk-11-slim AS build
+FROM maven:4.0.0-jdk-11.0.11 AS build
 COPY src /home/app/src
 COPY pom.xml /home/app
 RUN mvn -f /home/app/pom.xml clean package

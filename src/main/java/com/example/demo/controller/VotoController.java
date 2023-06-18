@@ -13,19 +13,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping; 
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetController;
 
 import com.example.demo.model.Voto;
 import com.example.demo.repositories.VotoRepository;
 
-@CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping(value ="/calcme")
 public class VotoController {
 	
 	@Autowired
 	public VotoRepository votoRepository;
 	
-	@RequestMapping(value="/all")
+	@GetMapping(value="/all")
 	public List<Voto> getAllCalcmes(){
 		return votoRepository.findAll(); 
 	}

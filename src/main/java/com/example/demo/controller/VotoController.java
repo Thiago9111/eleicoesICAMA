@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.Voto;
 import com.example.demo.repositories.VotoRepository;
 
-@CrossOrigin(origins = "https://mateusfbarros.github.io/frontEleicoesICAMA/")
+@CrossOrigin(origins = "https://mateusfbarros.github.io")
 @RestController
 @RequestMapping(value ="/calcme")
 public class VotoController {

@@ -27,11 +27,13 @@ public class VotoController {
 	public VotoRepository votoRepository;
 	
 	@GetMapping(value="/all")
+	@CrossOrigin(origins = "https://mateusfbarros.github.io")
 	public List<Voto> getAllCalcmes(){
 		return votoRepository.findAll(); 
 	}
 	
 	@PostMapping(value ="/create")
+	@CrossOrigin(origins = "https://mateusfbarros.github.io")
 	public ResponseEntity<String>  createCalcme(@RequestBody Voto calcme ) {
 		try {
 			votoRepository.insert(calcme);
@@ -44,6 +46,7 @@ public class VotoController {
 	}
 	
 	@DeleteMapping(value ="/{id}")
+	@CrossOrigin(origins = "https://mateusfbarros.github.io")
 	public ResponseEntity<String> deleteCalcme(@PathVariable ("id") Voto calcme) {
 		try {
 			votoRepository.deleteById(calcme.getId());
